@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>StarlingProject</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>com.adobe.flexbuilder.project.flexbuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>com.adobe.flexbuilder.project.actionscriptnature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>[source path] Hi-ReS-Stats-master-src</name>
+			<type>2</type>
+			<location>/Users/jamesashton/Documents/development/common/flex stuff/Hi-ReS-Stats-master/src</location>
+		</link>
+		<link>
+			<name>[source path] starling-src</name>
+			<type>2</type>
+			<location>/Users/jamesashton/Documents/development/common/flex stuff/Starling-Framework-0ac3592/starling/src</location>
+		</link>
+	</linkedResources>
+</projectDescription>
