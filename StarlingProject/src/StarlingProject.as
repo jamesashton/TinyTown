@@ -4,9 +4,12 @@ package
 	
 	import net.hires.debug.Stats;
 	
+	import screens.InGame;
+	import screens.Welcome;
+	
 	import starling.core.Starling;
-
-	[SWF(frameRate="60", width="800", height="600", backgroundColor="0x333333")]
+	
+	[SWF(frameRate="60", width="1024", height="768", backgroundColor="0x333333")]
 	public class StarlingProject extends Sprite
 	{
 		
