@@ -6,28 +6,24 @@ package
 	import starling.textures.Texture;
 	import starling.textures.TextureAtlas;
 
-	public class Assets
+	public class InGameAssets
 	{
-		[Embed("../media/welcomeimages/Background.png")]
-		public static const WelcomeBackground:Class;
-		
-		[Embed("../media/welcomeimages/SignPost.png")]
-		public static const WelcomePlayButton:Class;
-		
-		[Embed("../media/welcomeimages/Sun.png")]
-		public static const WelcomeSun:Class;
-		
-		[Embed("../media/welcomeimages/TownLogo.png")]
-		public static const WelcomeTownLogo:Class;
-		
 		private static var gameTextures:Dictionary = new Dictionary();
 		private static var gameTextureAtlas:TextureAtlas;
 		
-		[Embed(source="../media/walkingMan/WalkingMan.png")]
+		
+		
+		
+		[Embed(source="../media/parallax/textures.png")]
 		public static const AtlasTextureGame:Class;
 		
-		[Embed(source="../media/walkingMan/WalkingMan.xml",mimeType="application/octet-stream")]
+		[Embed(source="../media/parallax/textures.xml",mimeType="application/octet-stream")]
 		public static const AtlasXmlGame:Class;
+		
+		[Embed(source="../media/parallax/bgLayer1.png")]
+		public static const BgLayer1:Class;
+		
+		
 		
 		public static function getAtlas():TextureAtlas
 		{
@@ -44,7 +40,7 @@ package
 		{
 			if(gameTextures[name] == undefined)
 			{
-				var bitmap:Bitmap = new Assets[name]();
+				var bitmap:Bitmap = new InGameAssets[name]();
 				gameTextures[name] = Texture.fromBitmap(bitmap);
 			}
 			return gameTextures[name];

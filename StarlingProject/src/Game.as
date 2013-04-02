@@ -2,6 +2,8 @@ package
 {
 	import events.NavigationEvent;
 	
+	import objects.BgLayer;
+	
 	import screens.InGame;
 	import screens.Welcome;
 	
@@ -10,6 +12,8 @@ package
 	
 	public class Game extends Sprite
 	{
+		
+		
 		private var screenWelcome:Welcome;
 		private var screenInGame:InGame;
 		public function Game()

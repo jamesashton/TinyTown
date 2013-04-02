@@ -24,7 +24,7 @@ package screens
 		
 		private function createHeroArt():void
 		{
-			heroArt = new MovieClip(Assets.getAtlas().getTextures("walkingMan"),20);
+			heroArt = new MovieClip(WelcomeScreenAssets.getAtlas().getTextures("walkingMan"),20);
 			heroArt.x = Math.ceil(-heroArt.width /2);
 			heroArt.y = Math.ceil(-heroArt.height/2);
 			starling.core.Starling.juggler.add(heroArt);

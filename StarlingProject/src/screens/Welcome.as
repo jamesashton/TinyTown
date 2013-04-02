@@ -29,20 +29,20 @@ package screens
 		}
 		private function drawScreen():void
 		{
-			bg = new Image(Assets.getTexture("WelcomeBackground"));
+			bg = new Image(WelcomeScreenAssets.getTexture("WelcomeBackground"));
 			this.addChild(bg);
 			
-			logo = new Image(Assets.getTexture("WelcomeTownLogo"));
+			logo = new Image(WelcomeScreenAssets.getTexture("WelcomeTownLogo"));
 			logo.x = this.width-logo.width +20;
 			logo.y = 200
 			this.addChild(logo);
 			
-			sun = new Image(Assets.getTexture("WelcomeSun"));
+			sun = new Image(WelcomeScreenAssets.getTexture("WelcomeSun"));
 			sun.y = 0;
 			sun.x = 0;
 			this.addChild(sun);
 			
-			sign = new Button(Assets.getTexture("WelcomePlayButton"));
+			sign = new Button(WelcomeScreenAssets.getTexture("WelcomePlayButton"));
 			sign.y=this.height-sign.height-40;
 			sign.x=20;
 			this.addChild(sign);
