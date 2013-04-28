@@ -1,0 +1,3 @@
+﻿package  {	import flash.display.MovieClip;
+	import flash.events.Event;
+		public class Wheel extends MovieClip	{		private static const FRAMES_PER_ROTATION:Number = 10;			public function Wheel() 		{			//this.x = -this.width/2;			//this.y = -this.height/2;			this.addEventListener(Event.ENTER_FRAME, onEnterFrame);		}		public function onEnterFrame(e:Event):void		{			this.rotation -= (360/FRAMES_PER_ROTATION);		}			}	}

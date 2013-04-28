@@ -10,7 +10,7 @@ package
 	{
 		private static var gameTextures:Dictionary = new Dictionary();
 		private static var gameTextureAtlas:TextureAtlas;
-		
+		private static var obstacleTextureAtlas:TextureAtlas;
 		
 		
 		
@@ -23,8 +23,18 @@ package
 		[Embed(source="../media/parallax/bgLayer1.png")]
 		public static const BgLayer1:Class;
 		
+		[Embed(source="../media/buttons/startButton.png")]
+		public static const StartButton:Class;
 		
+		[Embed(source="../media/car/fiat500/spritesheet/SmallFiat500.png")]
+		public static const ObstacleTextureAtlas:Class;
 		
+		[Embed(source="../media/car/fiat500/spritesheet/SmallFiat500.xml",mimeType="application/octet-stream")]		
+		public static const ObstacleTextureAtlasXml:Class;
+		
+		[Embed(source="../media/car/fiat500/SmallFiat500Crash.png")]
+		public static const ObstacleCrashImage:Class;
+
 		public static function getAtlas():TextureAtlas
 		{
 			if(gameTextureAtlas == null)
@@ -36,6 +46,18 @@ package
 			return gameTextureAtlas;
 			
 		}
+		public static function getObstacleAtlas():TextureAtlas
+		{
+			if(obstacleTextureAtlas == null)
+			{
+				var texture:Texture = getTexture("ObstacleTextureAtlas");
+				var xml:XML = XML(new ObstacleTextureAtlasXml());
+				obstacleTextureAtlas = new TextureAtlas(texture, xml);
+			}
+			return obstacleTextureAtlas;
+			
+		}
+		
 		public static function getTexture(name:String):Texture
 		{
 			if(gameTextures[name] == undefined)
